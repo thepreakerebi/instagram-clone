@@ -1,0 +1,17 @@
+{
+  "name": "instagram",
+  "version": "1.0.0",
+  "description": "An instagram clone",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "author": "Elvis Preye Kerebi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18"
+  }
+}
