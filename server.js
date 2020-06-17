@@ -7,13 +7,15 @@ dotenv.config({ path: './config/config.env'});
 
 connectDB();
 
+const users = require('./routes/auth');
+const posts = require('./routes/post');
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send(`<h1>Hello World, Welcome to the Grandeur</h1>`);
-});
-
 app.use(express.json());
+
+app.use('/api/v1', users);
+app.use('/api/v1', posts);
 
 const PORT = process.env.PORT || 5000;
 
